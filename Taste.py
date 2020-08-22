@@ -62,7 +62,7 @@ listgrup = []
 vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 os.system('clear')
-### LOGO ##$
+### LOGO ###
 logo = """ 
 \033[1;94m╭━━━╮
 \033[1;94m┃╭━╮┃
