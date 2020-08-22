@@ -102,7 +102,7 @@ vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 os.system('clear')
 	
-print '
+print """
 \033[0;31m╭━━━╮
 \033[0;31m┃╭━╮┃
 \033[0;31m┃┃╱┃┣━━┳┳━━┳━━┳━╮
@@ -119,10 +119,10 @@ YOUTUBE :-  Tech Qaiser
 
 DISCLAIMRR :- This Tool Is only for Educational Purposes I am not responsible for any miss use
 
-NOTE  :- Need First Hand GirlFriend :-)'
+NOTE  :- Need First Hand GirlFriend :-)"""
 
-CorrectUsername = 'faizanwahla'
-CorrectPassword = 'fbw'
+CorrectUsername = 'Qaiser'
+CorrectPassword = 'Qaiser'
 loop = 'true'
 while loop == 'true':
     username = raw_input('\x1b[1;91m\xf0\x9f\x94\x90 \x1b[1;91mTool Username \x1b[1;91m\xc2\xbb\xc2\xbb \x1b[1;93m')
@@ -506,3 +506,5 @@ def pilih_super():
     menu()
     
     if __name__ == '__main__':
+    	login()
+    
