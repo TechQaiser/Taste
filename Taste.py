@@ -1,25 +1,32 @@
-import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, requests, mechanize
+#!/usr/bin/python2
+#coding=utf-8
+#The Credit For This Code Goes To Tech Qaiser
+#If You Wanna Take Credits For This Code, Please Look Yourself Again...
+#Reserved2020
+
+
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
+
+
 reload(sys)
 sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
-br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 
 def keluar():
-    print '\x1b[1;91mExit'
-    os.sys.exit()
-
+	print "\x1b[1;91mExit"
+	os.sys.exit()
 
 def acak(b):
     w = 'ahtdzjc'
     d = ''
     for i in x:
-        d += '!' + w[random.randint(0, len(w) - 1)] + i
-
+        d += '!'+w[random.randint(0,len(w)-1)]+i
     return cetak(d)
 
 
@@ -27,22 +34,54 @@ def cetak(b):
     w = 'ahtdzjc'
     for i in w:
         j = w.index(i)
-        x = x.replace('!%s' % i, '\x1b[%s;1m' % str(31 + j))
-
-    x += '\x1b[0m'
-    x = x.replace('!0', '\x1b[0m')
-    sys.stdout.write(x + '\n')
+        x= x.replace('!%s'%i,'\033[%s;1m'%str(31+j))
+    x += '\033[0m'
+    x = x.replace('!0','\033[0m')
+    sys.stdout.write(x+'\n')
 
 
 def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.07)
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.001)
+		
+logo = """
+\033[0;31m░██████╗░░█████╗░██╗░██████╗███████╗██████╗░
+\033[0;31m██╔═══██╗██╔══██╗██║██╔════╝██╔════╝██╔══██╗
+\033[0;31m██║██╗██║███████║██║╚█████╗░█████╗░░██████╔╝
+\033[0;31m╚██████╔╝██╔══██║██║░╚═══██╗██╔══╝░░██╔══██╗
+\033[0;31m░╚═██╔═╝░██║░░██║██║██████╔╝███████╗██║░░██║
+\033[0;31m░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝
 
+\033[0;33m===========================
 
-logo = "\n\x1b[1;92m########::'###::::'####:'########::::'###::::'##::: ##\n\x1b[1;92m##.....::'## ##:::. ##::..... ##::::'## ##::: ###:: ##\n\x1b[1;92m##::::::'##:. ##::: ##:::::: ##::::'##:. ##:: ####: ##\n\x1b[1;92m######:'##:::. ##:: ##::::: ##::::'##:::. ##: ## ## ##\n\x1b[1;92m##...:: #########:: ##:::: ##::::: #########: ##. ####\n\x1b[1;92m##::::: ##.... ##:: ##::: ##:::::: ##.... ##: ##:. ###\n\x1b[1;92m##::::: ##:::: ##:'####: ########: ##:::: ##: ##::. ##\n\n\x1b[1;34;40m                                                  v1.0\n\x1b[1;97m====================\x1b[1;91m[Mr TRICKSTER]\x1b[1;97m=====================\n\x1b[1;97mAuthor\xc2\xa9\x1b[1;97m   : \x1b[1;34;40mFaizan Wahla\n\x1b[1;97mInstagram\x1b[1;97m : \x1b[1;30;40mhttps://www.Instagram.com/mr._.faizu01\n\x1b[1;97mFacebook\x1b[1;97m  : \x1b[1;30;40mhttps://www.facebook.com/faizan.wahla.47\n\x1b[1;97mFB Page \x1b[1;97m  : \x1b[1;30;40mhttps://m.facebook.com/FaizanWahlaxD/\n\x1b[1;97mGithub  \x1b[1;97m  : \x1b[1;30;40mhttps://github.com/MrHackerXD\n\x1b[1;97mYoutube \x1b[1;97m  : \x1b[1;30;40mMr Trickster\n\x1b[1;97mWhatsapp\x1b[1;97m  : \x1b[1;30;40m+923066199314\n\x1b[1;97m====================\x1b[1;91m[Mr HACKER XD]\x1b[1;97m=====================\x1b[1;35;40mOpen CP IDs on Opera Mini OR Facebook Lite After 7 Days\x1b[1;97m======================================================="
-logo2 = '\n  \x1b[1;91m                                                            \n                      ,,                               \n`7MM```YMM            db                               \n  MM    `7                                             \n  MM   d    ,6"Yb.  `7MM  M```MMV  ,6"Yb.  `7MMpMMMb.  \n  MM""MM   8)   MM    MM  \'  AMV  8)   MM    MM    MM  \n  MM   Y    ,pm9MM    MM    AMV    ,pm9MM    MM    MM  \n  MM       8M   MM    MM   AMV  , 8M   MM    MM    MM  \n.JMML.     `Moo9^Yo..JMML.AMMmmmM `Moo9^Yo..JMML  JMML. \n'
+Github :- https:-github.com/TechQaiser/
+Facebook :- Qaiser Abbas
+Youtube :- Tech Qaiser
+Note :- I am Not responsible For Any Miss Use
+
+\033[0;32m==========================
+
+"""
+logo2 = """
+\033[0;31m░██████╗░░█████╗░██╗░██████╗███████╗██████╗░
+\033[0;31m██╔═══██╗██╔══██╗██║██╔════╝██╔════╝██╔══██╗
+\033[0;31m██║██╗██║███████║██║╚█████╗░█████╗░░██████╔╝
+\033[0;31m╚██████╔╝██╔══██║██║░╚═══██╗██╔══╝░░██╔══██╗
+\033[0;31m░╚═██╔═╝░██║░░██║██║██████╔╝███████╗██║░░██║
+\033[0;31m░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝
+
+\033[0;33m===========================
+
+Github :- https:-github.com/TechQaiser/
+Facebook :- Qaiser Abbas
+Youtube :- Tech Qaiser
+Note :- I am Not responsible For Any Miss Use
+
+\033[0;32m==========================
+
+"""
 
 def tik():
     titik = [
@@ -62,17 +101,25 @@ listgrup = []
 vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 os.system('clear')
-### LOGO ###
-logo = """ 
-\033[1;94m╭━━━╮
-\033[1;94m┃╭━╮┃
-\033[1;94m┃┃╱┃┣━━┳┳━━┳━━┳━╮
-\033[1;94m┃┃╱┃┃╭╮┣┫━━┫┃━┫╭╯
-\033[1;94m┃╰━╯┃╭╮┃┣━━┃┃━┫┃
-\033[1;94m╰━━╮┣╯╰┻┻━━┻━━┻╯
-\033[1;94m╱╱╱╰╯
+	
+print '
+\033[0;31m╭━━━╮
+\033[0;31m┃╭━╮┃
+\033[0;31m┃┃╱┃┣━━┳┳━━┳━━┳━╮
+\033[0;31m┃┃╱┃┃╭╮┣┫━━┫┃━┫╭╯
+\033[0;31m┃╰━╯┃╭╮┃┣━━┃┃━┫┃
+\033[0;31m╰━━╮┣╯╰┻┻━━┻━━┻╯
+\033[0;31m╱╱╱╰╯
 
-"""
+GITHUB :- https://github.com/TechQaiser
+
+FACEBOOK :- Qaiser Abbas
+
+YOUTUBE :-  Tech Qaiser
+
+DISCLAIMRR :- This Tool Is only for Educational Purposes I am not responsible for any miss use
+
+NOTE  :- Need First Hand GirlFriend :-)'
 
 CorrectUsername = 'faizanwahla'
 CorrectPassword = 'fbw'
