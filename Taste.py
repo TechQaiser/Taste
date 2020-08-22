@@ -62,10 +62,14 @@ listgrup = []
 vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 os.system('clear')
-print '\n  \x1b[1;91mB
-B.   B
-B.  B
-BBB'
+print '
+\033[1;94m╭━━━╮
+\033[1;94m┃╭━╮┃
+\033[1;94m┃┃╱┃┣━━┳┳━━┳━━┳━╮
+\033[1;94m┃┃╱┃┃╭╮┣┫━━┫┃━┫╭╯
+\033[1;94m┃╰━╯┃╭╮┃┣━━┃┃━┫┃
+\033[1;94m╰━━╮┣╯╰┻┻━━┻━━┻╯
+\033[1;94m╱╱╱╰╯'
 
 CorrectUsername = 'faizanwahla'
 CorrectPassword = 'fbw'
