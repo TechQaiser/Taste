@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 #coding=utf-8
-#The Credit For This Code Goes To Tech Qaiser
+#The Credit For This Code Goes To Tech-Qaiser
 #If You Wanna Take Credits For This Code, Please Look Yourself Again...
 #Reserved2020
 
@@ -121,17 +121,21 @@ while loop == 'true':
     else:
         print 'Wrong Username'
         os.system('xdg-open https://youtu.be/bnitNSNYX5o')
-
+##### LICENSE #####
+#=================#
+def lisensi():
+	os.system('clear')
+	login()
 ####login#########
 def login():
 	os.system('clear')
 	print logo
-	     print "\033[1;96m> \033[1;97m1.\x1b[1;93m Login With Email/id "
+	     print "1.\x1b[1;93m Login "
         time.sleep(0.05)
-        print "\033[1;96m> \033[1;97m2.\x1b[1;95mLogin  Using Token"
+        print "2.\x1b[1;95mLogin  Using Token"
         time.sleep(0.05)
         print "0.\033[1;95mExit           "
-	pilih_login()
+	    pilih_login()
 	
 def pilih_login():
 	peak = raw_input("\n\033[1;92mChoose an Option>>> \033[1;94m")
@@ -141,7 +145,7 @@ def pilih_login():
 	elif peak =="1":
 		login()
 	elif peak =="2":
-	        tokenz()
+	    tokenz()
 	elif peak =="0":
 		keluar()
         else:
